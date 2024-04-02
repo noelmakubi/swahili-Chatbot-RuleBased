@@ -1,6 +1,4 @@
 # swahili-Chatbot-RuleBased
-# Interactive Swahili Chatbot
-
 [![GitHub license](https://img.shields.io/github/license/yourusername/yourrepository.svg)](https://github.com/yourusername/yourrepository/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/yourusername/yourrepository.svg)](https://github.com/yourusername/yourrepository/issues)
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/yourrepository.svg)](https://github.com/yourusername/yourrepository/stargazers)
