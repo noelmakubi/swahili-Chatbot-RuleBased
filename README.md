@@ -1,48 +1,40 @@
 # swahili-Chatbot-RuleBased
-A simple Swahili chatbot implemented in Python using NLTK library.
 
-## Table of Contents
+Welcome to the Flask Chatbot repository! This project implements a simple chatbot using Flask and NLTK. The chatbot reads from a dataset to provide responses based on user input.
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## Getting Started
 
-## Introduction
+To get started with this project, follow these steps:
 
-This project is a Swahili chatbot that responds to user queries based on a knowledge base. The chatbot is implemented in Python using the NLTK library for natural language processing.
+1. **Clone the repository:**
+    ```bash
+   https://github.com/noelmakubi/swahili-Chatbot-RuleBased.git
+    ```
 
-## Installation
+2. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-1. Clone the repository:
-
-2. Navigate to the project directory:
-
-3. Install the required dependencies:
-
+3. **Run the Flask application:**
+    ```bash
+    python app.py
+    ```
 
 ## Usage
 
-To use the chatbot, follow these steps:
+Once the Flask application is running, you can interact with the chatbot. Open your web browser and go to `http://localhost:5000/` to access the chat interface.
 
-1. Make sure you have Python installed on your system.
-2. Run the chatbot script:
+## Features
 
-3. Start chatting with the bot. Type 'katisha' to exit the conversation.
+- Interactive chat interface
+- Responses based on similarity matching using NLTK's Jaccard distance
+- Easy to extend with additional dataset
 
-## Contributing
+## Contributions
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature`)
-3. Make your changes
-4. Commit your changes (`git commit -am 'Add new feature'`)
-5. Push to the branch (`git push origin feature`)
-6. Create a new Pull Request
+Contributions are welcome! If you find any bugs or want to suggest enhancements, feel free to open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the GNU General Public License v2.0- see the [LICENSE](LICENSE) file for details.
-
+This project is licensed under the GPL-2.0 license- see the [LICENSE](LICENSE) file for details.
