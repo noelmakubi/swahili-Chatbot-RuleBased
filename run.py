@@ -4,7 +4,7 @@ import nltk
 app = Flask(__name__)
 
 # Open the text file which is the knowledge base of our chatbot and read each line of text file
-with open('dataset.txt', 'r') as file:
+with open('data/dataset.txt', 'r') as file:
     f = file.readlines()
 
 # From text file split line into two sides of question and its answers
