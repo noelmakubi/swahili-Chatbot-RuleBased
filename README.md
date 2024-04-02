@@ -8,7 +8,7 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-   (https://github.com/noelmakubi/swahili-Chatbot-RuleBased.git)
+   https://github.com/noelmakubi/swahili-Chatbot-RuleBased.git
     ```
 
 2. **Install dependencies:**
