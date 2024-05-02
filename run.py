@@ -52,9 +52,7 @@ def chat():
 if __name__ == "__main__":
     app.run(debug=True)
 
-# from flask import Flask, request, render_template
-# import torch
-# from transformers import BertForQuestionAnswering, BertTokenizer
+
 
 # app = Flask(__name__)
 
