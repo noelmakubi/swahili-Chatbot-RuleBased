@@ -4,19 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
+    <!-- Link to external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #chat-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        #chat-box {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 20px; /* Add padding to compensate for scrollbar width */
+        }
+
+        .message-container {
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 5px;
+            clear: both;
+            overflow-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #f0f8ff;
+            float: right;
+        }
+
+        .bot-message {
+            background-color: #e6e6fa;
+            float: left;
+        }
+
+        #user-input-container {
+            text-align: center;
+        }
+
+        #user-input {
+            width: calc(30% - 70px); /* Adjust to leave space for the button */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing:inherit; /* Ensure padding is included in the width */
+            margin-bottom: 10px;
+        }
+
+        #send-button {
+            width: 60px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Swahili Chatbot</h1>
     <div id="chat-container">
         <div id="chat-box"></div>
+    </div>
+    <div id="user-input-container">
         <input type="text" id="user-input">
-        <button onclick="sendMessage()">Send</button>
+        <button id="send-button" onclick="sendMessage()">Send</button>
     </div>
 
     <script>
         function sendMessage() {
             var userInput = document.getElementById("user-input").value;
-            document.getElementById("chat-box").innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
+            document.getElementById("chat-box").innerHTML += `
+                <div class="message-container">
+                    <div class="message user-message">
+                        <strong>You:</strong> ${userInput}
+                    </div>
+                </div>`;
             document.getElementById("user-input").value = "";
             fetch("/chat", {
                 method: "POST",
@@ -29,7 +114,12 @@
             })
             .then(response => response.text())
             .then(data => {
-                document.getElementById("chat-box").innerHTML += "<p><strong>Bot:</strong> " + data + "</p>";
+                document.getElementById("chat-box").innerHTML += `
+                    <div class="message-container">
+                        <div class="message bot-message">
+                            <strong>Bot:</strong> ${data}
+                        </div>
+                    </div>`;
             });
         }
     </script>

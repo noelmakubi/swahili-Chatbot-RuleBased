@@ -51,3 +51,57 @@ def chat():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# from flask import Flask, request, render_template
+# import torch
+# from transformers import BertForQuestionAnswering, BertTokenizer
+
+# app = Flask(__name__)
+
+# # Load pre-trained BERT model and tokenizer
+# model_name = "mrm8488/bert-tiny-finetuned-squadv2"
+# tokenizer = BertTokenizer.from_pretrained(model_name)
+# model = BertForQuestionAnswering.from_pretrained(model_name)
+
+# # Open the text file which is the knowledge base of our chatbot and read each line of text file
+# with open('data/dataset.txt', 'r') as file:
+#     f = file.readlines()
+
+# # From text file split line into two sides of question and its answers
+# pairs = [line.strip().split(':') for line in f]
+
+# # Create an empty list that will keep question and their answers splitted from pairs
+# conversation = []
+# for pair in pairs:
+#     question = pair[0].lower()
+#     answer = pair[1].lower()
+#     # Append question with their answers to conversation list
+#     conversation.append((question, answer))
+
+# def generate_response(user_input):
+#     inputs = tokenizer(user_input, return_tensors="pt")
+#     with torch.no_grad():
+#         outputs = model(**inputs)
+    
+#     # Extract the answer from the model's output
+#     answer_start = torch.argmax(outputs.start_logits)
+#     answer_end = torch.argmax(outputs.end_logits) + 1
+#     answer = tokenizer.decode(inputs["input_ids"][0][answer_start:answer_end])
+
+#     return answer
+
+# @app.route("/")
+# def index():
+#     return render_template('index.html')
+
+# @app.route("/chat", methods=["POST"])
+# def chat():
+#     user_input = request.form["msg"]
+#     if user_input.lower() == 'katisha':
+#         return "Kwaheri. Asante"
+#     else:
+#         reply = generate_response(user_input)
+#         return reply
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
