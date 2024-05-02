@@ -54,13 +54,6 @@ if __name__ == "__main__":
 
 
 
-# # Create an empty list that will keep question and their answers splitted from pairs
-# conversation = []
-# for pair in pairs:
-#     question = pair[0].lower()
-#     answer = pair[1].lower()
-#     # Append question with their answers to conversation list
-#     conversation.append((question, answer))
 
 # def generate_response(user_input):
 #     inputs = tokenizer(user_input, return_tensors="pt")
