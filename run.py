@@ -55,17 +55,7 @@ if __name__ == "__main__":
 
 
 
-# def generate_response(user_input):
-#     inputs = tokenizer(user_input, return_tensors="pt")
-#     with torch.no_grad():
-#         outputs = model(**inputs)
-    
-#     # Extract the answer from the model's output
-#     answer_start = torch.argmax(outputs.start_logits)
-#     answer_end = torch.argmax(outputs.end_logits) + 1
-#     answer = tokenizer.decode(inputs["input_ids"][0][answer_start:answer_end])
 
-#     return answer
 
 # @app.route("/")
 # def index():
