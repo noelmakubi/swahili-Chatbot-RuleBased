@@ -57,16 +57,6 @@ if __name__ == "__main__":
 
 
 
-# @app.route("/")
-# def index():
-#     return render_template('index.html')
-
-# @app.route("/chat", methods=["POST"])
-# def chat():
-#     user_input = request.form["msg"]
-#     if user_input.lower() == 'katisha':
-#         return "Kwaheri. Asante"
-#     else:
 #         reply = generate_response(user_input)
 #         return reply
 
