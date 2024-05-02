@@ -54,20 +54,6 @@ if __name__ == "__main__":
 
 
 
-# app = Flask(__name__)
-
-# # Load pre-trained BERT model and tokenizer
-# model_name = "mrm8488/bert-tiny-finetuned-squadv2"
-# tokenizer = BertTokenizer.from_pretrained(model_name)
-# model = BertForQuestionAnswering.from_pretrained(model_name)
-
-# # Open the text file which is the knowledge base of our chatbot and read each line of text file
-# with open('data/dataset.txt', 'r') as file:
-#     f = file.readlines()
-
-# # From text file split line into two sides of question and its answers
-# pairs = [line.strip().split(':') for line in f]
-
 # # Create an empty list that will keep question and their answers splitted from pairs
 # conversation = []
 # for pair in pairs:
